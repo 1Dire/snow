@@ -1,0 +1,43 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+
+/* 기존 .interface를 .key-ui로 이름 변경 */
+.key-ui {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  pointer-events: none;
+  user-select: none; /* 글씨 드래그 방지 */
+}
+
+/* 아래 내용은 그대로 두셔도 됩니다 */
+.controls-info p { margin: 0; font-size: 0.9rem; opacity: 0.8; }
+.keys-container { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.row { display: flex; gap: 5px; }
+.key {
+  width: 40px; height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  display: flex; justify-content: center; align-items: center;
+  font-weight: bold; transition: all 0.1s ease;
+}
+.key.wide { width: 100px; }
+.key.active {
+  background: white; color: black;
+  transform: scale(0.95); border-color: white;
+}
+.special-keys { margin-top: 10px; }
