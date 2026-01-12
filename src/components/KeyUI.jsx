@@ -11,7 +11,7 @@ export const KeyUI = () => {
   return (
     <div className="key-ui">
       <div className="controls-info">
-        <p>WASD to drive</p>
+        <p>WASD to move</p>
         {/* Space 안내 문구 삭제 */}
       </div>
 
