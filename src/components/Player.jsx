@@ -98,7 +98,12 @@ const Player = () => {
         // 3. 카메라는 항상 공을 바라봄
         state.camera.lookAt(currentPosVector);
       }
-
+      // 공 높이 체크
+      if (bodyPosition.y < -20) {
+        body.current.setTranslation({ x: 0, y: 5, z: 0 }, true);
+        body.current.setLinvel({ x: 0, y: 0, z: 0 }, true);
+        body.current.setAngvel({ x: 0, y: 0, z: 0 }, true);
+      }
       // E. 다음 프레임 계산을 위해 현재 위치를 '과거 위치'로 저장
       lastPosition.current.copy(currentPosVector);
       
